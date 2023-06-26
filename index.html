@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--De esto se encargo Alvaro-->
+
+		<title>Art Station</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<script>
+			function convertirMoneda() {
+			  // Obtener el valor seleccionado del menú de selección
+			  var tipoMoneda = document.getElementById("moneda").value;
+		
+			  // Obtener el precio del producto
+			  var precioProducto = parseFloat(document.getElementById("precio").textContent);
+		
+			  // Realizar la conversión basada en el tipo de moneda seleccionado
+			  var precioConvertido;
+			  switch (tipoMoneda) {
+				case "USD":
+				  precioConvertido = precioProducto * 0.85; // Conversión a dólares
+				  break;
+				case "EUR":
+				  precioConvertido = precioProducto * 0.72; // Conversión a euros
+				  break;
+				case "JPY":
+				  precioConvertido = precioProducto * 89.42; // Conversión a yenes japoneses
+				  break;
+				// Agregar más casos para otras monedas si es necesario
+			  }
+		
+			  // Mostrar el precio convertido en el elemento de visualización
+			  document.getElementById("precio-convertido").textContent = precioConvertido.toFixed(2);
+			}
+		  </script>
+
+    </head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a href="tel:+523325642405"> +52 3325642405 <i class="fa fa-phone"></i></a></li>
+						<li><a href="mailto:aruarualmacenamiento@gmail.com">aruarualmacenamiento@gmail.com <i class="fa fa-envelope-o"></i></a></li>
+						<li><a href="https://goo.gl/maps/KRNskj2Dn5TTrGYA6" target="_blank" rel="noopener noreferrer">C. Independencia 55, Centro, 44100 Guadalajara, Jal. <i class="fa fa-map-marker"></i></a></li>
+					</ul>
+					<ul class="header-links pull-right">
+						<i><p>Seleccione el tipo de moneda:</p>
+
+  <select id="moneda" onchange="convertirMoneda()"></i>
+    <option value="USD">Dólares estadounidenses</option>
+    <option value="EUR">Euros</option>
+    <option value="JPY">Yenes japoneses</option>
+	<option value="MNX">Pesos Mexicanos</option>
+    <!-- Agregar más opciones para otras monedas si es necesario -->
+  </select>
+						<li><a href="./form/login.php"><i class="fa fa-user-o"></i> Iniciar Sesión</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="index.html"class="logo">
+									<img src="img/1.png" alt="" width="250">
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- Barra de busqueda -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<input class="input" placeholder="Buscar aqui">
+									<button class="search-btn">Buscar</button>
+								</form>
+							</div>
+						</div>
+						<!-- /Barra de busqueda -->
+
+						<!-- Cuenta -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Lista de deseados-->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<span>Deseados.</span>
+										<div class="qty">0</div>
+									</a>
+								</div>
+								<!-- /Lista de deseados -->
+
+								<!-- Carrito -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Carrito</span>
+										<div class="qty">0</div>
+									
+								</div>
+								<!-- /Carrito -->
+
+								<!-- Menu -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+								<!-- /Menu-->
+							</div>
+						</div>
+						<!-- /Cuenta -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- Navegacion -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="index.html">Inicio</a></li>
+						<li><a href="Ofertas_Del_Dia.html">Ofertas del dia</a></li>						
+						<li><a href="Tienda.html">Tienda</a></li>
+						<li><a href="#">Consejos de arte</a></li>
+						<li><a href="galeria.html">Galeria de creaciones</a></li>
+						
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /Navegacion -->
+            
+  <div class="banner">
+  <img class="banner-image" src="img/e.gif" alt="">
+</div>
+
+
+		<!-- Principales -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- Nuevas tabletas -->
+					<div class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/nuevastabletas.jpg" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Nuevas<br>Tablets</h3>
+								<a href="Nuevas_tabletas.HTML" class="cta-btn">Hecha un vistazo <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- /Nuevas tabletas -->
+
+					<!-- Lapices -->
+					<div class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/lapicesalemanes.jpeg" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Nuevos<br>Lapices alemanes</h3>
+								<a href="Lapices_alemanes.HTML" class="cta-btn">Hecha un vistazo <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- /Lapices -->
+
+					<!-- Participar en la galeria -->
+					<div class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/artedigital.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>¿Quieres mostrar tu talento?</h3>
+								<a href="https://forms.gle/FV1sVYHgYZoFZWDH9" class="cta-btn">Llenar formulario<i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- /Participar en la galeria -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /Principales  -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section titulo -->
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title">Productos recien llegados</h3>
+	
+						</div>
+					</div>
+					<!-- /section titulo -->
+
+					<!-- Productos recien llegados -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-slick" data-nav="#slick-nav-1">
+								<!-- producto 1 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/artist 22epro.jpg" alt="">											
+									</div>
+									<div class="product-body">
+										<p class="product-category">Tabletas digitales</p>
+										<h3 class="product-name"><a href="#">Artist 22E Pro</a></h3>
+										<h4 class="product-price">$14,999.00 </h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 1-->
+
+								<!-- producto 2 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="img/artist13_3pro.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Tabletas digitales</p>
+										<h3 class="product-name"><a href="#">Artist 13.3 Pro</a></h3>
+										<h4 class="product-price">$11,199.00 </h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 2 -->
+
+								<!-- producto 3 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/P05 Lápiz sin Batería.png" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Lapices digitales</p>
+										<h3 class="product-name"><a href="#">P05 Lápiz sin Batería</a></h3>
+										<h4 class="product-price">$559.00 </h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 3 -->
+
+								<!-- producto 4 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/Wacom Cintiq 16.png" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Tabletas digitales</p>
+										<h3 class="product-name"><a href="#">Wacom Cintiq 16 DTK1660K0A</a></h3>
+										<h4 class="product-price">$18,399.00</h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 4 -->
+
+								
+								<!-- producto 5 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/licencia de pago permanente EX.png" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Licencias de Programas</p>
+										<h3 class="product-name"><a href="#">Licencia de pago unico Clip studio paint EX</a></h3>
+										<h4 class="product-price">$899.00 </h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 5 -->
+							</div>
+							<div id="slick-nav-1" class="products-slick-nav"></div>
+						</div>
+						</div>
+					
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		
+
+<!-- Recomendaciones para iniciar -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+
+			<!-- section title -->
+			<div class="col-md-12">
+				<div class="section-title">
+					<h3 class="title">Recomendaciones para iniciar</h3>
+
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+			<div class="col-md-12">
+				<div class="row">
+					<div class="products-slick" data-nav="#slick-nav-1">
+								<!-- producto 1 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/artist12.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Tabletas digitales</p>
+										<h3 class="product-name"><a href="#">Artist 12</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 1-->
+
+								<!-- producto 2 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="img/guante gatitos.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Accesorios</p>
+										<h3 class="product-name"><a href="#">Guante Antiincrustante Artist SE</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 2 -->
+                        								<!-- producto 5 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/AC48 Bolsa Protectora.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Accesorios</p>
+										<h3 class="product-name"><a href="#">P05 Lápiz sin Batería</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 5 -->
+
+								<!-- producto 3 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/AC48 Bolsa Protectora.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Accesorios</p>
+										<h3 class="product-name"><a href="#">P05 Lápiz sin Batería</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 3 -->
+
+								<!-- producto 4 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/AC42 Soporte Para Pantalla de 12 Pulgadas.jpg" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Accesorios</p>
+										<h3 class="product-name"><a href="#">AC42 Soporte Para Pantalla de 12 Pulgadas</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 4 -->
+
+								
+								<!-- producto 5 -->
+								<div class="product">
+									<div class="product-img">
+										<img src="./img/licencia de permanente.png" alt="">
+										<div class="product-label">
+										</div>
+									</div>
+									<div class="product-body">
+										<p class="product-category">Licencias de Programas</p>
+										<h3 class="product-name"><a href="#">Licencia de pago unico Clip studio paint</a></h3>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a lista de deseados</span></button>
+		
+										</div>
+									</div>
+									<div class="add-to-cart">
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Añadir al carrito</button>
+									</div>
+								</div>
+								<!-- /producto 5 -->
+							</div>
+							<div id="slick-nav-1" class="products-slick-nav"></div>
+					
+					</div>
+				</div>
+			
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /Recomendaciones para iniciar -->
+		<!-- Boletin de noticas-->
+		<!--Pendiente de configurar-->
+		<div id="newsletter" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="newsletter">
+							<p>Unete a nuestro nuevo <strong>Boletin de noticias</strong></p>
+							<form>
+								<input class="input" type="email" placeholder="Correo electronico">
+								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribirte</button>
+							</form>
+							<ul class="newsletter-follow">
+								<li>
+									<a href="https://es-la.facebook.com/"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="https://www.pinterest.com.mx/"><i class="fa fa-pinterest"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /Boletin de noticas -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Nosotros</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+								<ul class="footer-links">
+									<li><a href="tel:+523325642405"> +52 3325642405 </a></li>
+									<li><a href="mailto:aruarualmacenamiento@gmail.com">aruarualmacenamiento@gmail.com </a></li>
+									<li><a href="https://goo.gl/maps/KRNskj2Dn5TTrGYA6" target="_blank" rel="noopener noreferrer">C. Independencia 55, Centro, 44100 Guadalajara, Jal. </a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Categorias</h3>
+								<ul class="footer-links">
+									<li class="active"><a href="index.html">Inicio</a></li>
+										<li><a href="Ofertas_Del_Dia.html">Ofertas del dia</a></li>
+										<li><a href="Tienda.html">Material digital</a></li>
+										<li><a href="Material_Tradicional.html">Material tradicional</a></li>
+										<li><a href="#">Consejos de arte</a></li>
+										<li><a href="#">Galeria de creaciones</a></li>
+										<li><a href="#">Sobre nosotros</a></li>
+										<li><a href="#">Historia</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Servicios</h3>
+								<ul class="footer-links">
+									<li><a href="#">Cuenta</a></li>
+									<li><a href="#">Carrito</a></li>
+									<li><a href="#">Lista de deseos</a></li>
+									<li><a href="#">Ayuda</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+				
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<h4>Metodos de pago aceptados.<h4>
+								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+								
+							</ul>
+							<span class="copyright">
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> Derechos reservados
+								| Art-Station
+							
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<!-- jQuery Plugins (lo que hace que se vea chido) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
